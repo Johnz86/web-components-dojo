@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="../../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+  <style>
+    .elements-demo {
+      max-width: 800px;
+      margin: 24px auto;
+    }
+
+    .elements-demo>div>*:not(strong) {
+      display: block;
+      border: 1px solid black;
+      padding: 8px;
+      margin: 8px 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <div class="elements-demo">
+    <h1>Intermediate examples</h1>
+
+    <div>
+      <strong>Compute properties based on other properties:</strong>
+      <x-computed-properties></x-computed-properties>
+    </div>
+
+    <div>
+      <strong>Update object properties:</strong>
+      <x-update-object-properties></x-update-object-properties>
+    </div>
+
+    <div>
+      <strong>Update array properties:</strong>
+      <x-update-array-properties></x-update-array-properties>
+    </div>
+
+    <div>
+      <strong>Set boolean attributes:</strong>
+      <x-set-boolean-attributes></x-set-boolean-attributes>
+    </div>
+
+    <div>
+      <strong>Query dom nodes imperatively:</strong>
+      <x-query-dom-nodes></x-query-dom-nodes>
+    </div>
+
+    <div>
+      <strong>Handle work that should be done once, after the first time the element was rendered:</strong>
+      <x-first-updated></x-first-updated>
+    </div>
+
+    <div>
+      <strong>Handle work that should be done each time the element rendered, or to respond to property changes:</strong>
+      <x-updated></x-updated>
+    </div>
+
+    <div>
+      <strong>Conditionally show/hide templates:</strong>
+      <x-conditional-templates variant="a"></x-conditional-templates>
+    </div>
+
+    <div>
+      <strong>Compose templates by nesting them:</strong>
+      <x-nesting-templates></x-nesting-templates>
+    </div>
+
+    <div>
+      <strong>Handle dynamic styles which change according to properties:</strong>
+      <x-dynamic-styles></x-dynamic-styles>
+    </div>
+
+    <div>
+      <strong>Handle dynamic lists/repeated templates that update frequently:</strong>
+      <x-dynamic-repeated-templates></x-dynamic-repeated-templates>
+    </div>
+
+    <div>
+      <strong>Reflect property values to attributes:</strong>
+      <x-reflect-property-to-attribute></x-reflect-property-to-attribute>
+    </div>
+
+  </div>
+
+  <script type="module" src="./01-computed-properties.js"></script>
+  <script type="module" src="./02-update-object-properties.js"></script>
+  <script type="module" src="./03-update-array-properties.js"></script>
+  <script type="module" src="./04-set-boolean-attributes.js"></script>
+  <script type="module" src="./05-query-dom-nodes.js"></script>
+  <script type="module" src="./06-first-updated.js"></script>
+  <script type="module" src="./07-updated.js"></script>
+  <script type="module" src="./08-conditional-templates.js"></script>
+  <script type="module" src="./09-nesting-templates.js"></script>
+  <script type="module" src="./10-dynamic-styles.js"></script>
+  <script type="module" src="./11-dynamic-repeated-templates.js"></script>
+  <script type="module" src="./12-reflect-property-to-attribute.js"></script>
+</body>
+
+</html>

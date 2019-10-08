@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js"></script>
+    <script>
+        const template = document.createElement('template');
+
+        template.innerHTML = `
+            <style>
+                span {
+                    font-size: 3rem;
+                    font-family: monospace;
+                    padding: 0 .5rem;
+                }
+            </style>
+            <div>
+                <span></span>
+            </div>`;
+
+        class ValueAttribute extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+                this.shadowRoot.appendChild(template.content.cloneNode(true));
+                this.displayVal = this.shadowRoot.querySelector('span');
+            }
+
+            connectedCallback() {
+                if (!this.hasAttribute('value')) {
+                    this.setAttribute('value', 1);
+                }
+            }
+
+            static get observedAttributes() {
+                return ['value'];
+            }
+
+            attributeChangedCallback(name, oldValue, newValue) {
+                this.displayVal.innerText = this.value;
+            }
+
+            get value() {
+                return this.getAttribute('value');
+            }
+
+            set value(newValue) {
+                this.setAttribute('value', newValue);
+            }
+        }
+
+        window.customElements.define('value-attribute', ValueAttribute);
+    </script>
+</head>
+
+<body>
+    <h1>Example with custom value Attribute</h1>
+    <value-attribute value="100"></value-attribute>
+</body>
+
+</html>

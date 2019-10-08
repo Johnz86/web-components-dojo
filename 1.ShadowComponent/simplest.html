@@ -1,0 +1,17 @@
+<html>
+<head>
+   <script>
+        class SampleComponent extends HTMLElement {
+            constructor() {
+                super();
+                const shadowRoot = this.attachShadow({ mode: 'open' });
+                shadowRoot.innerHTML = '<h1>Hello Shadow DOM</h1>';
+            }
+        }
+        customElements.define('sample-component', SampleComponent);
+    </script>
+</head>
+<body>
+    <sample-component></sample-component>
+</body>
+</html>

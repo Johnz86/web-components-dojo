@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js"></script>
+
+  <style>
+    .elements-demo {
+      max-width: 800px;
+      margin: 24px auto;
+    }
+
+    .elements-demo>div>*:not(strong) {
+      display: block;
+      border: 1px solid black;
+      padding: 8px;
+      margin: 8px 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="elements-demo">
+    <h1>Basic examples</h1>
+
+    <div>
+      <strong>Define a basic LitElement:</strong>
+      <x-hello-world></x-hello-world>
+    </div>
+
+    <div>
+      <strong>Define properties on your element:</strong>
+      <x-properties message="Hello world!"></x-properties>
+    </div>
+
+    <div>
+      <strong>Destructure properties in render callback:</strong>
+      <x-object-destructuring message="Hello world!"></x-object-destructuring>
+    </div>
+
+    <div>
+      <strong>Set default values for properties:</strong>
+      <x-default-property></x-default-property>
+    </div>
+
+    <div>
+      <strong>Update the dynamic parts of your template on property changes:</strong>
+      <x-property-changes></x-property-changes>
+    </div>
+
+    <div>
+      <strong>Set javascript properties on elements in your template:</strong>
+      <x-set-properties></x-set-properties>
+    </div>
+
+    <div>
+      <strong>Set html attributes on elements in your template:</strong>
+      <x-set-attributes href="#" label="Foo"></x-set-attributes>
+    </div>
+
+    <div>
+      <strong>Handle DOM events:</strong>
+      <x-handle-events></x-handle-events>
+    </div>
+
+    <div>
+      <strong>Conditional logic inside templates:</strong>
+      <x-conditional-logic message="Hello world!"></x-conditional-logic>
+    </div>
+
+    <div>
+      <strong>Repeat templates:</strong>
+      <x-repeat-templates></x-repeat-templates>
+    </div>
+
+    <div>
+      <strong>Render styles:</strong>
+      <x-render-styles></x-render-styles>
+    </div>
+
+    <div>
+      <strong>Polymer elements:</strong>
+      <x-polymer-elements></x-polymer-elements>
+    </div>
+
+  </div>
+
+  <script type="module" src="./01-hello-world.js"></script>
+  <script type="module" src="./02-properties.js"></script>
+  <script type="module" src="./03-object-destructuring.js"></script>
+  <script type="module" src="./04-default-property.js"></script>
+  <script type="module" src="./05-property-changes.js"></script>
+  <script type="module" src="./06-set-properties.js"></script>
+  <script type="module" src="./07-set-attributes.js"></script>
+  <script type="module" src="./08-handle-events.js"></script>
+  <script type="module" src="./09-conditional-logic.js"></script>
+  <script type="module" src="./10-repeat-templates.js"></script>
+  <script type="module" src="./11-render-styles.js"></script>
+  <script type="module" src="./12-polymer-elements.js"></script>
+</body>
+
+</html>

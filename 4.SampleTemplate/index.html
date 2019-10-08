@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js"></script>
+    <script>
+        class SampleTemplate extends HTMLElement {
+            constructor() {
+                super();
+                const template = document.getElementById('my-paragraph');
+                const templateContent = template.content;
+                this.attachShadow({ mode: 'open' }).appendChild(templateContent.cloneNode(true));
+            }
+        }
+        customElements.define('sample-template', SampleTemplate);
+    </script>
+</head>
+
+<body>
+    <template id="my-paragraph">
+        <style>
+            p {
+                color: white;
+                background-color: #666;
+                padding: 5px;
+            }
+        </style>
+        <p>
+            <slot name="my-text">My default template text</slot>
+        </p>
+    </template>
+    <sample-template></sample-template>
+    <div>--------</div>
+    <sample-template>
+        <span slot="my-text">Other custom text!</span>
+    </sample-template>
+</body>
+
+</html>

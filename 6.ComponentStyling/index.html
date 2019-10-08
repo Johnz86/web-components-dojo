@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js"></script>
+    <style>
+        html {
+            --text-color: #fff;
+            --back-color: #00008c;
+        }
+    </style>
+    <script>
+        const template = document.createElement('template');
+        template.innerHTML = `
+            <style>
+                :host{
+                    margin: 10px;
+                    font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+                }
+                button {
+                    position: relative;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    border: none;
+                    padding: 0 16px;
+                    min-width: 64px;
+                    height: 36px;
+                    vertical-align: middle;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    text-transform: uppercase;
+                    color: var(--text-color);
+                    background-color: var(--back-color);
+                    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                    overflow: hidden;
+                    outline: none;
+                    cursor: pointer;
+                    transition: box-shadow 0.2s;
+                }
+                button:hover,
+                button:focus {
+                    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+                }
+                button:active {
+                    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+                }
+
+            </style>
+            <div>
+                <button type="button"><slot></slot></button>
+            </div>`;
+
+        class ButtonComponent extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+                this.shadowRoot.appendChild(template.content.cloneNode(true));
+            }
+        }
+
+        window.customElements.define('button-material', ButtonComponent);
+    </script>
+</head>
+
+<body>
+    <h1>Custom Button</h1>
+    <button-material>Some Text</button-material>
+</body>
+
+</html>

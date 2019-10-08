@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="../../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+  <style>
+    .elements-demo {
+      max-width: 800px;
+      margin: 24px auto;
+    }
+
+    .elements-demo>div>*:not(strong) {
+      display: block;
+      border: 1px solid black;
+      padding: 8px;
+      margin: 8px 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <div class="elements-demo">
+    <h1>Advanced examples</h1>
+
+    <div>
+      <strong>Observe property changes by writing custom setters:</strong>
+      <x-property-setter-observer></x-property-setter-observer>
+    </div>
+
+    <div>
+      <strong>Render promises:</strong>
+      <x-render-promises></x-render-promises>
+    </div>
+
+    <div>
+      <strong>Show placeholder content while loading a promise:</strong>
+      <x-until-directive></x-until-directive>
+    </div>
+
+    <div>
+      <strong>Conditionally wrap templates:</strong>
+      <x-template-wrapping></x-template-wrapping>
+    </div>
+
+    <div>
+      <strong>Share templates between elements:</strong>
+      <x-shared-template></x-shared-template>
+    </div>
+
+    <div>
+      <strong>Share styles between elements:</strong>
+      <x-shared-styles></x-shared-styles>
+    </div>
+
+    <div>
+      <strong>Render a template from an external source:</strong>
+      <x-external-template></x-external-template>
+    </div>
+
+    <div>
+      <strong>Create factory functions that return new templates:</strong>
+      <x-template-factories></x-template-factories>
+    </div>
+
+    <div>
+      <strong>Separate CSS, HTML and JS in different files:</strong>
+      <x-separate-css-html-js></x-separate-css-html-js>
+    </div>
+
+    <div>
+      <strong>Prevent an element from updating it's view with shouldUpdate:</strong>
+      <x-should-update></x-should-update>
+    </div>
+
+  </div>
+
+  <script type="module" src="./01-property-setter-observer.js"></script>
+  <script type="module" src="./02-render-promises.js"></script>
+  <script type="module" src="./03-until-directive.js"></script>
+  <script type="module" src="./04-template-wrapping.js"></script>
+  <script type="module" src="./05-shared-template.js"></script>
+  <script type="module" src="./06-shared-styles.js"></script>
+  <script type="module" src="./07-external-template.js"></script>
+  <script type="module" src="./08-template-factories.js"></script>
+  <script type="module" src="./09-separate-css-html-js-element.js"></script>
+  <script type="module" src="./10-should-update.js"></script>
+</body>
+
+</html>

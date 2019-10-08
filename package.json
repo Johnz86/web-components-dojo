@@ -1,0 +1,15 @@
+{
+  "name": "web-components-examples",
+  "version": "1.0.0",
+  "description": "A series of web components examples.",
+  "main": "index.js",
+  "dependencies": {
+    "serve": "^11.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "author": "",
+  "license": "ISC"
+}
