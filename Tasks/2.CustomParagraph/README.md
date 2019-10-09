@@ -1,6 +1,9 @@
 # Custom Paragraph Component
 
-Create a custom component Header which will look like App-Bar
+> Create Custom html paragraph element that will be child of article
+> Custom html paragraph will count the number of words in article
+> Text will be for example ```Words: 215```
+> Each time the list of words is changed recount the number of words
 
 Default html structure is:
 
@@ -41,12 +44,6 @@ Html component should contain
         tempus a, scelerisque sed diam.</p>
 </article>
 ```
-
-> Create Custom html paragraph element that will be child of article
-> Custom html paragraph will count the number of words in article
-> Text will be for example ```Words: 215```
-> Each time the list of words is changed recount the number of words
-
 Tips
 ```js
 function countWords(node) {
